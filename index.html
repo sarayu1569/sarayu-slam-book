@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sarayu's Little World 🦚</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     WELCOME SCREEN
+     ========================= -->
+
+<section class="screen welcome" id="welcomeScreen">
+
+    <div class="peacock-big">🦚</div>
+
+    <div class="flute-row">
+        🪈 ✨ 🦚 ✨ 🪈
+    </div>
+
+    <h1>
+        Okay… let’s see how well you know me 💙
+    </h1>
+
+    <p>
+        A few little things that make me, me… ✨
+    </p>
+
+    <button
+        class="main-button"
+        onclick="startSlamBook()"
+    >
+        Dive into my little world 🦚✨
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     NAME SCREEN
+     ========================= -->
+
+<section class="screen hidden" id="nameScreen">
+
+    <div class="peacock-big">🦚</div>
+
+    <h1>
+        Before we begin... 💙
+    </h1>
+
+    <p>
+        Tell me your name so I know who's signing my little world 💌
+    </p>
+
+    <input
+        type="text"
+        id="friendName"
+        placeholder="Enter your name..."
+        autocomplete="off"
+    >
+
+    <button
+        class="main-button"
+        onclick="saveName()"
+    >
+        Let's Go 🦚
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     QUESTION 1
+     ========================= -->
+
+<section
+    class="screen hidden question-screen"
+    id="question1"
+>
+
+    <div class="question-number">
+        QUESTION 1 OF 10
+    </div>
+
+    <div class="peacock-small">
+        🦚
+    </div>
+
+    <h2>
+        What's my favourite colour? 💙
+    </h2>
+
+    <div class="simple-options">
+
+        <button
+            class="answer-option"
+            data-answer="Black"
+        >
+            🖤 Black
+        </button>
+
+        <button
+            class="answer-option"
+            data-answer="Blue"
+        >
+            💙 Blue
+        </button>
+
+        <button
+            class="answer-option"
+            data-answer="Maroon"
+        >
+            ❤️ Maroon
+        </button>
+
+        <button
+            class="answer-option"
+            data-answer="Yellow"
+        >
+            💛 Yellow
+        </button>
+
+    </div>
+
+    <button
+        class="next-button"
+        onclick="nextQuestion(1)"
+    >
+        Next → 🦚
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     QUESTION 2
+     ========================= -->
+
+<section
+    class="screen hidden question-screen"
+    id="question2"
+>
+
+    <div class="question-number">
+        QUESTION 2 OF 10
+    </div>
+
+    <div class="peacock-small">
+        🦚
+    </div>
+
+    <h2>
+        What's my favourite movie? 🎬
+    </h2>
+
+    <div class="photo-grid">
+
+        <button
+            class="photo-option"
+            data-answer="Nee Sneham"
+        >
+
+            <img
+                src="images/nee-sneham.jpg"
+                alt="Nee Sneham"
+            >
+
+            <span>Nee Sneham</span>
+
+        </button>
+
+
+        <button
+            class="photo-option"
+            data-answer="Hi Nanna"
+        >
+
+            <img
+                src="images/hi-nanna.jpg"
+                alt="Hi Nanna"
+            >
+
+            <span>Hi Nanna</span>
+
+        </button>
+
+
+        <button
+            class="photo-option"
+            data-answer="Nuvvu Leka Nenu Lenu"
+        >
+
+            <img
+                src="images/nuvvu-leka-nenu-lenu.jpg"
+                alt="Nuvvu Leka Nenu Lenu"
+            >
+
+            <span>Nuvvu Leka Nenu Lenu</span>
+
+        </button>
+
+
+        <button
+            class="photo-option"
+            data-answer="Mr Perfect"
+        >
+
+            <img
+                src="images/mr-perfect.jpg"
+                alt="Mr Perfect"
+            >
+
+            <span>Mr Perfect</span>
+
+        </button>
+
+    </div>
+
+    <button
+        class="next-button"
+        onclick="nextQuestion(2)"
+    >
+        Next → 🦚
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     QUESTION 3
+     ========================= -->
+
+<section
+    class="screen hidden question-screen"
+    id="question3"
+>
+
+    <div class="question-number">
+        QUESTION 3 OF 10
+    </div>
+
+    <div class="peacock-small">
+        🦚
+    </div>
+
+    <h2>
+        Who's my favourite BLACKPINK member? 🖤💗
+    </h2>
+
+    <div class="photo-grid">
+
+        <button
+            class="photo-option"
+            data-answer="Jennie"
+        >
+
+            <img
+                src="images/jennie.jpg"
+                alt="Jennie"
+            >
+
+            <span>Jennie</span>
+
+        </button>
+
+
+        <button
+            class="photo-option"
+            data-answer="Lisa"
+        >
+
+            <img
+                src="images/lisa.jpg"
+                alt="Lisa"
+            >
+
+            <span>Lisa</span>
+
+        </button>
+
+
+        <button
+            class="photo-option"
+            data-answer="Jisoo"
+        >
+
+            <img
+                src="images/jisoo.jpg"
+                alt="Jisoo"
+            >
+
+            <span>Jisoo</span>
+
+        </button>
+
+
+        <button
+            class="photo-option"
+            data-answer="Rosé"
+        >
+
+            <img
+                src="images/rose.jpg"
+                alt="Rosé"
+            >
+
+            <span>Rosé</span>
+
+        </button>
+
+    </div>
+
+    <button
+        class="next-button"
+        onclick="nextQuestion(3)"
+    >
+        Next → 🦚
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     QUESTION 4
+     ========================= -->
+
+<section
+    class="screen hidden question-screen"
+    id="question4"
+>
+
+    <div class="question-number">
+        QUESTION 4 OF 10
+    </div>
+
+    <div class="peacock-small">
+        🦚
+    </div>
+
+    <h2>
+        Who's my favourite singer? 🎧
+    </h2>
+
+    <div class="photo-grid">
+
+        <button
+            class="photo-option"
+            data-answer="Lana Del Rey"
+        >
+
+            <img
+                src="images/lana-del-rey.jpg"
+                alt="Lana Del Rey"
+            >
+
+            <span>Lana Del Rey</span>
+
+        </button>
+
+
+        <button
+            class="photo-option"
+            data-answer="Anirudh"
+        >
+
+            <img
+                src="images/anirudh.jpg"
+                alt="Anirudh"
+            >
+
+            <span>Anirudh</span>
+
+        </button>
+
+
+        <button
+            class="photo-option"
+            data-answer="Sai Abhyankar"
+        >
+
+            <img
+                src="images/sai-abhyankar.jpg"
+                alt="Sai Abhyankar"
+            >
+
+            <span>Sai Abhyankar</span>
+
+        </button>
+
+
+        <button
+            class="photo-option"
+            data-answer="Ariana Grande"
+        >
+
+            <img
+                src="images/ariana-grande.jpg"
+                alt="Ariana Grande"
+            >
+
+            <span>Ariana Grande</span>
+
+        </button>
+
+    </div>
+
+    <button
+        class="next-button"
+        onclick="nextQuestion(4)"
+    >
+        Next → 🦚
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     QUESTION 5
+     ========================= -->
+
+<section
+    class="screen hidden question-screen"
+    id="question5"
+>
+
+    <div class="question-number">
+        QUESTION 5 OF 10
+    </div>
+
+    <div class="peacock-small">
+        🦚
+    </div>
+
+    <h2>
+        Which female character reminds you of me? 🎬
+    </h2>
+
+    <textarea
+        id="answer5"
+        placeholder="Tell me the character..."
+    ></textarea>
+
+    <button
+        class="next-button"
+        onclick="nextQuestion(5)"
+    >
+        Next → 🦚
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     QUESTION 6
+     ========================= -->
+
+<section
+    class="screen hidden question-screen"
+    id="question6"
+>
+
+    <div class="question-number">
+        QUESTION 6 OF 10
+    </div>
+
+    <div class="peacock-small">
+        🦚
+    </div>
+
+    <h2>
+        Which song reminds you of me? 🎶
+    </h2>
+
+    <textarea
+        id="answer6"
+        placeholder="Write a song..."
+    ></textarea>
+
+    <button
+        class="next-button"
+        onclick="nextQuestion(6)"
+    >
+        Next → 🦚
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     QUESTION 7
+     ========================= -->
+
+<section
+    class="screen hidden question-screen"
+    id="question7"
+>
+
+    <div class="question-number">
+        QUESTION 7 OF 10
+    </div>
+
+    <div class="peacock-small">
+        🦚
+    </div>
+
+    <h2>
+        What's my biggest green flag? 💚
+    </h2>
+
+    <textarea
+        id="answer7"
+        placeholder="Tell me..."
+    ></textarea>
+
+    <button
+        class="next-button"
+        onclick="nextQuestion(7)"
+    >
+        Next → 🦚
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     QUESTION 8
+     ========================= -->
+
+<section
+    class="screen hidden question-screen"
+    id="question8"
+>
+
+    <div class="question-number">
+        QUESTION 8 OF 10
+    </div>
+
+    <div class="peacock-small">
+        🦚
+    </div>
+
+    <h2>
+        What don't you like about me? 😂
+    </h2>
+
+    <textarea
+        id="answer8"
+        placeholder="Be honest... 😂"
+    ></textarea>
+
+    <button
+        class="next-button"
+        onclick="nextQuestion(8)"
+    >
+        Next → 🦚
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     QUESTION 9
+     ========================= -->
+
+<section
+    class="screen hidden question-screen"
+    id="question9"
+>
+
+    <div class="question-number">
+        QUESTION 9 OF 10
+    </div>
+
+    <div class="peacock-small">
+        🦚
+    </div>
+
+    <h2>
+        What do you like most about me? 💙
+    </h2>
+
+    <textarea
+        id="answer9"
+        placeholder="Tell me what you like most..."
+    ></textarea>
+
+    <button
+        class="next-button"
+        onclick="nextQuestion(9)"
+    >
+        Next → 🦚
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     QUESTION 10
+     ========================= -->
+
+<section
+    class="screen hidden question-screen"
+    id="question10"
+>
+
+    <div class="question-number">
+        QUESTION 10 OF 10
+    </div>
+
+    <div class="peacock-small">
+        🦚
+    </div>
+
+    <h2>
+        What's the funniest thing about me? 😂
+    </h2>
+
+    <textarea
+        id="answer10"
+        placeholder="Make me laugh 😂"
+    ></textarea>
+
+    <button
+        class="submit-button"
+        onclick="submitSlamBook()"
+    >
+        Submit my answers 💌
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     RESULTS
+     ========================= -->
+
+<section
+    class="screen hidden results-screen"
+    id="resultsScreen"
+>
+
+    <div class="peacock-big">
+        🦚
+    </div>
+
+    <div class="question-number">
+        YOUR SLAM BOOK SCORE
+    </div>
+
+    <div id="scoreText">
+        0 / 4
+    </div>
+
+    <p id="resultMessage"></p>
+
+    <div id="answerReview"></div>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
